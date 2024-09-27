@@ -1,0 +1,80 @@
+@import "/src/app/variables";
+
+.stepper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.step_title {
+  font-size: 2rem;
+}
+
+.step_description {
+  font-size: 1.25rem;
+  font-weight: 350;
+}
+
+.step_image {
+  filter: brightness(90%) saturate(10%);
+  @media (max-width: $mobile-breakpoint) {
+    justify-self: center;
+  }
+}
+
+.text_block {
+  opacity: 0.2;
+  transition: opacity 0.1s ease-in;
+}
+
+.active {
+  opacity: 1;
+  .step_title {
+    // color: $tertiary-color;
+  }
+  .step_image {
+    filter: none;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  gap: 3rem;
+
+  @media (min-width: $mobile-breakpoint) {
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+    :nth-child(1) {
+      :first-child {
+        align-self: flex-end;
+      }
+      :nth-child(2) {
+        text-align: right;
+      }
+    }
+    :nth-child(2) {
+      align-self: center;
+    }
+  }
+}
+
+.alternate_container {
+  @media (min-width: $mobile-breakpoint) {
+    :nth-child(1) {
+      :first-child {
+        align-self: flex-start;
+      }
+      :nth-child(2) {
+        text-align: left;
+      }
+    }
+    :nth-child(2) {
+      grid-row-start: 1;
+      justify-self: end;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@use "./variables" as *;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 1rem;
+  @media (max-width: $mobile-breakpoint) {
+    font-size: 14px;
+  }
+}
+
+.gradient {
+  background: $primary-color;
+  color: $secondary-color;
+}
+
+.smooth {
+  --scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+.no-scroll {
+  @media (max-width: $breakpoint) {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.section {
+  max-width: $page-max-width;
+  padding-left: $page-padding;
+  padding-right: $page-padding;
+  margin: auto;
+  @media (max-width: $mobile-breakpoint) {
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+  }
+}

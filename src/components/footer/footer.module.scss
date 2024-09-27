@@ -1,0 +1,13 @@
+@use "/src/app/variables" as *;
+
+.column_heading {
+  font-size: 1.5rem;
+}
+
+.footer_link {
+  text-decoration: none;
+  word-break: break-all;
+  &:hover {
+    text-decoration: underline;
+  }
+}

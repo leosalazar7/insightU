@@ -1,0 +1,45 @@
+@use "../variables" as *;
+
+.container {
+  display: flex;
+  padding: 3rem;
+  border-radius: 1rem;
+  color: $primary-color;
+  background-color: rgb(238, 238, 238);
+  gap: 2rem;
+
+  flex-direction: column;
+}
+
+.benefit_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.job_layout {
+  grid-template-columns: 1fr;
+  align-items: start;
+  @media (min-width: $breakpoint) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+}
+
+.bullet_list {
+  list-style-type: disc;
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+  padding-inline-start: 2.5rem;
+}
+
+.qualifications_section {
+  background-color: rgb(244, 244, 244);
+  color: $primary-color;
+  padding: 2rem;
+  border-radius: 1rem;
+}

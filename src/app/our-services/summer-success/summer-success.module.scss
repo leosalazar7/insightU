@@ -1,0 +1,33 @@
+@use "../../variables" as *;
+
+.container {
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.programDetails {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: $mobile-breakpoint) {
+    flex-direction: column;
+  }
+}
+
+.column {
+  flex: 0 0 48%;
+  border: 1px solid #ddd;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.column h2 {
+  margin-top: 0;
+}
+
+.column p {
+  margin: 10px 0;
+}
